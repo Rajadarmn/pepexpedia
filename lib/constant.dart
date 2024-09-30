@@ -1,15 +1,17 @@
+/* Saving All Constant Values */
+
 import 'package:flutter/material.dart';
 import 'package:ui_ecommerce/size_config.dart';
 
-const kPrimaryColor = Color.fromARGB(255, 56, 244, 147);
-const kPrimaryLightColor = Color(0xffffecdf);
+const kPrimaryColor = Color(0xff357ab7);
+const kPrimaryLightColor = Color(0xffe3f2fd);
 const kPrimaryGradientColor = LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
   colors: [
-    Color.fromRGBO(255, 165, 62, 1),
-    Color.fromARGB(255, 56, 244, 147),
-  ],
+      Color(0xff6fbaff), // A lighter and brighter blue
+      Color(0xff357ab7), // A slightly darker blue for contrast
+    ]
 );
 
 const kSecondaryColor = Color(0xff979797);
@@ -18,11 +20,11 @@ const kTextColor = Color(0xff757575);
 const kAnimationDuration = Duration(milliseconds: 200);
 
 final headingStyle = TextStyle(
-            fontSize: getProportionateScreenWidth(28),
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-            height: 1.5,
-  );
+  fontSize: getPropScreenWidth(28),
+  fontWeight: FontWeight.bold,
+  color: Colors.black,
+  height: 1.5,
+);
 
 // Form Error
 final RegExp emailValidatorRegExp =
@@ -33,7 +35,27 @@ const String kPassNullError = "Please Enter your password";
 const String kShortPassError = "Password is too short";
 const String kMatchPassError = "Passwords don't match";
 
-//complate profile
-const String KNameNullError = "please enter your Name";
-const String KPhoneNullError = "please enter your Phone number";
-const String KAddressNullError = "please enter your Address";
+// Complete Profile
+const String kNameNullError = "Please Enter your name";
+const String kPhoneNumberNullError = "Please enter your phone number";
+const String kAddressNullError = "Please enter address";
+
+// OTP style
+
+final otpDecoration = InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(
+                      vertical: getPropScreenHeight(15),
+                    ),
+                    enabledBorder: otpOutlineInputBorder(),
+                    focusedBorder: otpOutlineInputBorder(),
+                    border: otpOutlineInputBorder(),
+                  );
+
+OutlineInputBorder otpOutlineInputBorder() {
+  return OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: const BorderSide(color: kTextColor),
+                  );
+}
+
+

@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ui_ecommerce/constant.dart';
 import 'package:ui_ecommerce/size_config.dart';
 
-
 class SplashContent extends StatelessWidget {
   const SplashContent({
-    super.key,
-    required this.text,
-    required this.image,
+    super.key, required this.text, required this.image
   });
 
   final String text, image;
@@ -16,31 +13,24 @@ class SplashContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Spacer(),
-        Text(
-          "PepexPedia",
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(36),
-            color: kPrimaryColor,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        Text(
-          text,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(14),
-            color: kTextColor,
-          ),
-        ),
-        Spacer(
-          flex: 2,
-        ),
-        Image.asset(
-          image,
-          height: getProportionateScreenHeight(265),
-          width: getProportionateScreenWidth(235),
-        ),
+        const Spacer(),
+         Text('My Store',
+            style: TextStyle(
+              fontSize: getPropScreenWidth(36),
+              color: kPrimaryColor,
+              fontWeight: FontWeight.bold
+            ), ),
+           Text(text,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: getPropScreenWidth(14),
+              color: kSecondaryColor
+            ), 
+            ),
+            const Spacer(flex: 2,),
+            Image.asset(image, 
+            height: getPropScreenHeight(265), 
+            width: getPropScreenWidth(235),),
       ],
     );
   }

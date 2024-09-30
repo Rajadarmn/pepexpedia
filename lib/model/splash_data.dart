@@ -1,11 +1,10 @@
 List<Map<String, String>> splashData = [
     {
-      "text": "Welcome to PepexPedia, Let’s shop!",
+      "text": "Welcome to My Store, Let’s shop!",
       "image": "assets/images/splash_1.png"
     },
     {
-      "text":
-          "We help people connect with store \naround United State of America",
+      "text": "We help people connect with store \naround The Great Britain",
       "image": "assets/images/splash_2.png"
     },
     {

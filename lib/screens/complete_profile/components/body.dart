@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui_ecommerce/components/social_media_icon.dart';
 import 'package:ui_ecommerce/constant.dart';
-import 'package:ui_ecommerce/screens/sign_up/components/sign_up_form.dart';
+import 'package:ui_ecommerce/screens/complete_profile/components/complete_profile_form.dart';
 import 'package:ui_ecommerce/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -16,47 +15,28 @@ class Body extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: SizeConfig.screenHeight * 0.04),
+              SizedBox(height: SizeConfig.screenHeight * 0.03),
               Text(
-                "Register Account",
+                "Complete Profile",
                 style: headingStyle,
               ),
               const Text(
-                "Complete your details or continue \nwith social media",
+                "Complete your profile data",
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.06),
-              const SignUpForm(),
-              SizedBox(height: SizeConfig.screenHeight * 0.06),
-              Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SocialMediaIcon(
-                      icon: "assets/icons/google-icon.svg",
-                      press: () {},
-                    ),
-                    SocialMediaIcon(
-                      icon: "assets/icons/facebook-2.svg",
-                      press: () {},
-                    ),
-                    SocialMediaIcon(
-                      icon: "assets/icons/twitter.svg",
-                      press: () {},
-                    ),
-                  ],
-                ),
+              const CompleteProfileForm(),
               SizedBox(height: SizeConfig.screenHeight * 0.03),
               const Text(
                 "By continuing your confirm that you agree \nwith our Term and Condition",
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.03),
-            ]
+            ],
           ),
         ),
       )
     );
   }
 }
-
 

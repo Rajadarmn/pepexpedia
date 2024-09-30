@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_ecommerce/screens/login_success/components/body.dart';
 
-
 class LoginSuccessScreen extends StatelessWidget {
   static String routeName = "/login_success";
   const LoginSuccessScreen({super.key});
@@ -10,13 +9,11 @@ class LoginSuccessScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("login success"),
+        title: const Text('Login Success'),
         centerTitle: true,
         leading: const SizedBox(),
       ),
-      body: body(
-        
-      ),
+      body: Body(),
     );
   }
 }

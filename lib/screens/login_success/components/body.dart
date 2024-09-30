@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ui_ecommerce/components/default_button.dart';
+import 'package:ui_ecommerce/components/my_default_button.dart';
+import 'package:ui_ecommerce/screens/home/home_screen.dart';
 import 'package:ui_ecommerce/size_config.dart';
 
-class body extends StatelessWidget {
-  const body({super.key});
+class Body extends StatelessWidget {
+  const Body({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,17 +12,13 @@ class body extends StatelessWidget {
       width: double.infinity,
       child: Column(
         children: [
-          SizedBox(
-            height: SizeConfig.screenHeight *0.04,
-          ),
-          Image.asset("assets/images/success.png"),
-          SizedBox(
-            height: SizeConfig.screenWidth * 0.08,
-          ),
+          SizedBox(height: SizeConfig.screenHeight * 0.04),
+          Image.asset("assets/images/login_success.png"),
+          SizedBox(height: SizeConfig.screenHeight * 0.04),
           Text(
-            "login success",
+            "Login Success!",
             style: TextStyle(
-              fontSize: getProportionateScreenWidth(30),
+              fontSize: getPropScreenWidth(30),
               fontWeight: FontWeight.bold,
               color: Colors.black
             ),
@@ -29,7 +26,12 @@ class body extends StatelessWidget {
           const Spacer(),
           SizedBox(
             width: SizeConfig.screenWidth * 0.6,
-            child: DefaultButton(text: "back to home", press: () {}),
+            child: MyDefaultButton(
+              text: "Back to Home",
+              press: () {
+                Navigator.pushNamed(context, HomeScreen.routeName);
+              },
+            ),
           ),
           const Spacer()
         ],
