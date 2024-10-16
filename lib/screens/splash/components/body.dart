@@ -66,7 +66,7 @@ class _BodyState extends State<Body> {
                         Navigator.pushNamed(context, SignInScreen.routeName);
                       },
                     ),
-                    Spacer(),
+                    const Spacer(),
                   ],
                 ),
               ),

@@ -14,7 +14,7 @@ class SplashContent extends StatelessWidget {
     return Column(
       children: [
         const Spacer(),
-         Text('My Store',
+         Text('Pepexpedia',
             style: TextStyle(
               fontSize: getPropScreenWidth(36),
               color: kPrimaryColor,

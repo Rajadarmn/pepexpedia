@@ -30,12 +30,12 @@ ThemeData themeData() {
 
     var outlineInputBorder = const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(28)),
-              borderSide: BorderSide(color: kPrimaryColor),
+              borderSide: BorderSide(color: Color.fromARGB(255, 51, 233, 142)),
               gapPadding: 10);
 
     return InputDecorationTheme(
           contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
-          labelStyle: const TextStyle(color: kPrimaryColor),
+          labelStyle: const TextStyle(color: Color.fromARGB(255, 51, 233, 142)),
           enabledBorder: outlineInputBorder,
           focusedBorder: outlineInputBorder,
           border: outlineInputBorder,

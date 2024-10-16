@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_ecommerce/size_config.dart';
 
-const kPrimaryColor = Color(0xff357ab7);
+const kPrimaryColor = Color.fromARGB(255, 51, 233, 142);
 const kPrimaryLightColor = Color(0xffe3f2fd);
 const kPrimaryGradientColor = LinearGradient(
   begin: Alignment.topLeft,
@@ -18,6 +18,8 @@ const kSecondaryColor = Color(0xff979797);
 const kTextColor = Color(0xff757575);
 
 const kAnimationDuration = Duration(milliseconds: 200);
+
+const inActiveIconColor =  Color(0xffb6b6b6);
 
 final headingStyle = TextStyle(
   fontSize: getPropScreenWidth(28),
@@ -57,5 +59,14 @@ OutlineInputBorder otpOutlineInputBorder() {
                     borderSide: const BorderSide(color: kTextColor),
                   );
 }
+
+
+const defaultDuration = Duration(milliseconds: 250);
+
+TextStyle SeeMoreStyle = TextStyle(
+  fontSize: getPropScreenWidth(16),
+                        fontWeight: FontWeight.bold,
+                        color: kPrimaryColor
+);
 
 

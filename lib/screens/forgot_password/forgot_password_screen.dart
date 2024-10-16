@@ -13,7 +13,7 @@ class ForgotPasswordScreen extends StatelessWidget {
         title: const Text("Forgot Password"),
         centerTitle: true,
       ),
-      body: Body(),
+      body:  Body(),
     );
   }
 }

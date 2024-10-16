@@ -12,9 +12,9 @@ class Body extends StatelessWidget {
       width: double.infinity,
       child: Column(
         children: [
-          SizedBox(height: SizeConfig.screenHeight * 0.04),
-          Image.asset("assets/images/login_success.png"),
-          SizedBox(height: SizeConfig.screenHeight * 0.04),
+          SizedBox(height: SizeConfig.screenHeight * 0.07),
+          Image.asset("assets/images/checklist-succes.webp", width: 260,),
+          SizedBox(height: SizeConfig.screenHeight * 0.10),
           Text(
             "Login Success!",
             style: TextStyle(

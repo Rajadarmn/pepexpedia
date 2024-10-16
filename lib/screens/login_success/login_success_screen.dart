@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ui_ecommerce/constant.dart';
 import 'package:ui_ecommerce/screens/login_success/components/body.dart';
+
 
 class LoginSuccessScreen extends StatelessWidget {
   static String routeName = "/login_success";
@@ -9,7 +11,12 @@ class LoginSuccessScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login Success'),
+        title: const Text(
+          'Pepexpedia',
+          style: TextStyle(
+            color: kPrimaryColor,
+            fontWeight: FontWeight.bold
+          ),),
         centerTitle: true,
         leading: const SizedBox(),
       ),
