@@ -19,4 +19,4 @@ Aplikasi ini dibangun menggunakan:
 - [Dart](https://dart.dev/) - Bahasa pemrograman yang digunakan untuk pengembangan aplikasi.
 
 
-![Mockup Ecommerce.png](Mockup Ecommerce.png)
+![Mockup Ecommerce.png](MockupEcommerce.png)
