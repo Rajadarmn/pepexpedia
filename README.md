@@ -20,4 +20,5 @@ Aplikasi ini dibangun menggunakan:
 
 
 
-![Product mockups (1)](https://github.com/user-attachments/assets/60ede56c-e0b6-4df6-8d05-424c74318e35)
+![Product mockups (1)](https://github.com/user-attachments/assets/60ede56c-e0b6-4df6-8d05-424c74318e35
+![Uploading Mockup Ecommerce.png…]()
