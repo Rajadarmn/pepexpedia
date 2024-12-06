@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_ecommerce/constant.dart';
 import 'package:ui_ecommerce/screens/otp/components/body.dart';
 
 class OtpScreen extends StatelessWidget {
@@ -9,7 +10,14 @@ class OtpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("OTP Verification"),
+        backgroundColor: kPrimaryColor,
+        title: const Text(
+          "OTP Verification",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+          ),
         centerTitle: true,
       ),
       body: const Body(),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ui_ecommerce/components/custom_navigation_bar.dart';
-import 'package:ui_ecommerce/constant.dart';
 import 'package:ui_ecommerce/enums.dart';
 import 'package:ui_ecommerce/screens/profile/components/body.dart';
-
+import 'package:provider/provider.dart';
+import 'package:ui_ecommerce/state_management/theme_provider.dart';
 
 class ProfileScreen extends StatelessWidget {
   static String routeName = "/profile";
@@ -12,27 +12,34 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: appBar(context),
+      appBar: appBar(context),
       body: Body(),
       bottomNavigationBar: CustomNavigationBar(menu: MenuState.profile),
     );
   }
-}
 
-AppBar appBar(BuildContext context) {
+  AppBar appBar(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+
     return AppBar(
-      leading: IconButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        icon: const Icon(Icons.arrow_back_ios_new_rounded),
+      forceMaterialTransparency: true,
+      leading: Container(),
+      centerTitle: true,
+      title: Text(
+        "Profile",
+        style: Theme.of(context).textTheme.bodyLarge,
       ),
-      title:
-          const Text(
-            "Profile",
-            style: TextStyle(
-              color: kTextColor,
-            ),
+      actions: [
+        IconButton(
+          onPressed: () {
+            themeProvider.toggleTheme(false);
+          },
+          icon: Icon(
+            themeProvider.isDarkMode ? Icons.wb_sunny : Icons.nightlight_round,
+            color: Theme.of(context).iconTheme.color,
           ),
+        ),
+      ],
     );
   }
+}

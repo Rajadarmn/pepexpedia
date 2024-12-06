@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ui_ecommerce/model/product.dart'; 
 import 'package:ui_ecommerce/screens/cart/cart_screen.dart';
 import 'package:ui_ecommerce/screens/complete_profile/complete_profile_screen.dart';
 import 'package:ui_ecommerce/screens/detail_screen/detail_screen.dart';
+import 'package:ui_ecommerce/screens/favourite/favourite_screen.dart';
 import 'package:ui_ecommerce/screens/forgot_password/forgot_password_screen.dart';
 import 'package:ui_ecommerce/screens/home/home_screen.dart';
 import 'package:ui_ecommerce/screens/login_success/login_success_screen.dart';
@@ -10,7 +12,6 @@ import 'package:ui_ecommerce/screens/profile/profile_screen.dart';
 import 'package:ui_ecommerce/screens/sign_in/sign_in_screen.dart';
 import 'package:ui_ecommerce/screens/sign_up/sign_up_screen.dart';
 import 'package:ui_ecommerce/screens/splash/splash_screen.dart';
-import 'model/product.dart';
 
 final Map<String, WidgetBuilder> routes = {
   SplashScreen.routeName: (context) => const SplashScreen(),
@@ -27,4 +28,5 @@ final Map<String, WidgetBuilder> routes = {
   },
   CartScreen.routeName: (context) => const CartScreen(),
   ProfileScreen.routeName: (context) => const ProfileScreen(),
+  FavouriteScreen.routeName: (context) => const FavouriteScreen(),
 };

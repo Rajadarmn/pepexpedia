@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_ecommerce/constant.dart';
 import 'package:ui_ecommerce/screens/sign_in/components/body.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -9,7 +10,14 @@ class SignInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Sign In"),
+        backgroundColor: kPrimaryColor,
+        title: const Text(
+          "Sign In",
+          style: TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+          ),
+          ),
         centerTitle: true,
         leading: Container(),
       ),

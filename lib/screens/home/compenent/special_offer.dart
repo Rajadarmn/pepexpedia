@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_ecommerce/screens/home/compenent/section_title.dart';
+
 import 'package:ui_ecommerce/screens/home/compenent/special_offers_content.dart';
 
 class SpecialOffer extends StatelessWidget {
@@ -11,9 +12,9 @@ class SpecialOffer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
+        const Padding(
           padding: EdgeInsets.symmetric(horizontal: 20),
-          child: SectionTitle(title: 'Special For You',),
+          child: SectionTitle(title: 'Special For You'),
         ),
         const SizedBox(height: 20),
         SingleChildScrollView(

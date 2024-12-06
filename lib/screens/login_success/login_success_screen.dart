@@ -11,10 +11,11 @@ class LoginSuccessScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: kPrimaryColor,
         title: const Text(
           'Pepexpedia',
           style: TextStyle(
-            color: kPrimaryColor,
+            color: Colors.white,
             fontWeight: FontWeight.bold
           ),),
         centerTitle: true,

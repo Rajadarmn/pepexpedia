@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_ecommerce/constant.dart';
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
@@ -11,17 +12,17 @@ class SectionTitle extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
+         Text(
           title,
           style: TextStyle(
             fontSize: 20,
-            color: Colors.black
+            color: kTextColor
           ),
         ),
-        Text(
+        const Text(
           "see more",
           style: TextStyle(
-            color: Colors.black54
+            color: kTextColor
           ),
         ),
         

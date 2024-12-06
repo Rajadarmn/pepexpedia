@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:ui_ecommerce/screens/profile/components/item_buttom.dart';
 import 'package:ui_ecommerce/screens/profile/components/profile_picture.dart';
 import 'package:ui_ecommerce/screens/sign_in/sign_in_screen.dart';
 import 'package:ui_ecommerce/size_config.dart';
+import 'package:ui_ecommerce/state_management/auth_provider.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -14,6 +16,17 @@ class Body extends StatelessWidget {
       child: Column(
         children: [
           const profilePicture(),
+          SizedBox(height: getPropScreenWidth(20)),
+          Consumer<AuthProvider>(
+            builder:(context, value, child) {
+              return Text(
+                value.email??"",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              );
+            },
+          ),
           SizedBox(height: getPropScreenWidth(20)),
           ItemButtonProfile(
             svgIcon: "assets/icons/User Icon.svg",

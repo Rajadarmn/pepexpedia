@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ui_ecommerce/model/cart.dart';
+import 'package:provider/provider.dart';
 import 'package:ui_ecommerce/screens/cart/cart_screen.dart';
 import 'package:ui_ecommerce/screens/home/compenent/icon_btn_with_counter.dart';
 import 'package:ui_ecommerce/screens/home/compenent/search_field.dart';
+import 'package:ui_ecommerce/state_management/cart_provider.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -17,18 +18,21 @@ class HomeHeader extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const SeachField(),
-          const IconBtnWithCounter(
+          const SearchField(),
+          IconBtnWithCounter(
             svgSrc: "assets/icons/Bell.svg",
-            num0fItems: null,
+            num0fItems: "",
           ),
              GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, CartScreen.routeName);
               },
-              child:  IconBtnWithCounter(
-              svgSrc: "assets/icons/Cart Icon.svg",
-              num0fItems: listCart.length.toString(),
+              child:  Consumer<CartProvider>(
+                builder: (context, cart, child) =>
+                IconBtnWithCounter(
+                svgSrc: "assets/icons/Cart Icon.svg",
+                num0fItems: cart.cartItems.length.toString(),
+                ),
               ),
             )
         ],

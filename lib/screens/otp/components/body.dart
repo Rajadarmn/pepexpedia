@@ -16,9 +16,13 @@ class Body extends StatelessWidget {
           child: Column(
             children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.03),
-                Text(
+                const Text(
                   "OTP Verification",
-                  style: headingStyle,
+                  style: TextStyle(
+                    color: kTextColor,
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold
+                  ),
                 ),
                 const Text(
                   "We sent your code to +62 123 321 ***",

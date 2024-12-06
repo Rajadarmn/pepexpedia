@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_ecommerce/constant.dart';
 import 'package:ui_ecommerce/screens/forgot_password/components/body.dart';
 
 
@@ -10,7 +11,14 @@ class ForgotPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Forgot Password"),
+        backgroundColor: kPrimaryColor,
+        title: const Text(
+          "Forgot Password",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
       ),
       body:  Body(),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_ecommerce/components/my_default_button.dart';
+import 'package:ui_ecommerce/constant.dart';
 import 'package:ui_ecommerce/screens/home/home_screen.dart';
 import 'package:ui_ecommerce/size_config.dart';
 
@@ -13,14 +14,14 @@ class Body extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(height: SizeConfig.screenHeight * 0.07),
-          Image.asset("assets/images/checklist-succes.webp", width: 260,),
+          Image.asset("assets/images/Hands Checkmark.png", width: 290, height: 280,),
           SizedBox(height: SizeConfig.screenHeight * 0.10),
           Text(
             "Login Success!",
             style: TextStyle(
-              fontSize: getPropScreenWidth(30),
+              fontSize: getPropScreenWidth(33),
               fontWeight: FontWeight.bold,
-              color: Colors.black
+              color: kTextColor
             ),
           ),
           const Spacer(),

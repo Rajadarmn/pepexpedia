@@ -16,9 +16,13 @@ class Body extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: SizeConfig.screenHeight * 0.03),
-              Text(
+              const Text(
                 "Complete Profile",
-                style: headingStyle,
+                style: TextStyle(
+                  color: kTextColor,
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const Text(
                 "Complete your profile data",

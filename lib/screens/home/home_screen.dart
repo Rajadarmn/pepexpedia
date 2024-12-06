@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_ecommerce/components/custom_navigation_bar.dart';
 import 'package:ui_ecommerce/enums.dart';
 import 'package:ui_ecommerce/screens/home/compenent/body.dart';
+import 'package:ui_ecommerce/size_config.dart';
 
 class HomeScreen extends StatelessWidget {
   static String routeName = "/home";
@@ -9,6 +10,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return const Scaffold(
       body: Body(),
       bottomNavigationBar: CustomNavigationBar(

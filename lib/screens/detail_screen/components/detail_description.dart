@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:readmore/readmore.dart';
 import 'package:ui_ecommerce/constant.dart';
 import 'package:ui_ecommerce/model/product.dart';
 import 'package:ui_ecommerce/size_config.dart';
+import 'package:ui_ecommerce/state_management/favourite_provider.dart';
 
 class detailDescription extends StatelessWidget {
   const detailDescription({
@@ -20,8 +22,8 @@ class detailDescription extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text(product.title, style: TextStyle(
-            fontSize: getPropScreenWidth(20),
-            color: Colors.black
+            fontSize: getPropScreenWidth(23),
+            color: kSecondaryColor,
            ),
           ),
         ),
@@ -39,10 +41,17 @@ class detailDescription extends StatelessWidget {
                 bottomLeft: Radius.circular(20)
               )
             ),
-            child: Icon(Icons.favorite, 
-            color: product.isFavourite 
-            ? Colors.red 
-            : kSecondaryColor,),
+            child: Consumer<FavoriteProvider>(
+              builder: (context, products, child) {
+                return GestureDetector(
+                  onTap: ()=> products.toggleFavoriteStatus(product.id),
+                  child: Icon(Icons.favorite, 
+                  color: product.isFavourite 
+                  ? Colors.red 
+                  : kSecondaryColor,),
+                );
+              }
+            ),
           ),
         ),
         Padding(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ui_ecommerce/constant.dart';
 import 'package:ui_ecommerce/model/product.dart';
 import 'package:ui_ecommerce/screens/detail_screen/components/body.dart';
+import 'package:ui_ecommerce/size_config.dart';
 
 class DetailScreen extends StatelessWidget {
   static String routeName = '/detail';
@@ -11,6 +13,14 @@ class DetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text(
+          product.title,
+          style: TextStyle(
+            fontSize: getPropScreenWidth(17),
+            color: const Color.fromARGB(255, 255, 255, 255),
+          ),
+        ),
+        backgroundColor: kPrimaryColor,
         leading: IconButton(onPressed: (){
           Navigator.pop(context);
         }, 
@@ -26,7 +36,9 @@ class DetailScreen extends StatelessWidget {
               children: [
                 Text(
                   "4.8",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   width: 5,
