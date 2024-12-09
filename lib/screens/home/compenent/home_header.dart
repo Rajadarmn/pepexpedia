@@ -21,7 +21,7 @@ class HomeHeader extends StatelessWidget {
           const SearchField(),
           IconBtnWithCounter(
             svgSrc: "assets/icons/Bell.svg",
-            num0fItems: "",
+            num0fItems: "0",
           ),
              GestureDetector(
               onTap: () {
